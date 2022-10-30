@@ -11,14 +11,14 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface SportDAO {
     @Query("SELECT * FROM Sport")
-    fun getAllSportData(): Flow<Sport>
+    fun getAllSportData(): Flow<List<Sport>>
 
     @Query("SELECT * FROM Sport WHERE Id IN (:id)")
-    fun getSportDataByIds(id: Int): Sport
+    suspend fun getSportDataByIds(id: Int): Sport
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertSportData( sport: Sport)
+    suspend fun insertSportData( sport: Sport)
 
     @Delete
-    fun deleteSportData(sport: Sport)
+    suspend fun deleteSportData(sport: Sport)
 }
