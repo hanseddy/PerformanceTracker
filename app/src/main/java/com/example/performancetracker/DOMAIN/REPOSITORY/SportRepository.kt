@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface SportRepository {
 
-    fun getAllSportData():Flow<List<Sport>>
+    suspend fun getAllSportData():List<Sport>
 
     suspend fun getSportDataById(id:Int):Sport
 

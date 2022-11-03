@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface SportDAO {
     @Query("SELECT * FROM Sport")
-    fun getAllSportData(): Flow<List<Sport>>
+    suspend fun getAllSportData(): List<Sport>
 
     @Query("SELECT * FROM Sport WHERE Id IN (:id)")
     suspend fun getSportDataByIds(id: Int): Sport

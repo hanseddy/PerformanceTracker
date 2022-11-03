@@ -6,7 +6,7 @@ import com.example.performancetracker.DOMAIN.REPOSITORY.SportRepository
 import kotlinx.coroutines.flow.Flow
 
 class SportRepositoryImpl(private val dao: SportDAO): SportRepository {
-    override fun getAllSportData(): Flow<List<Sport>> {
+    override suspend fun getAllSportData(): List<Sport> {
         return dao.getAllSportData()
     }
 

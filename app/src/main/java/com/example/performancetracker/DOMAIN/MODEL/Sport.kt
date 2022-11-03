@@ -2,17 +2,19 @@ package com.example.performancetracker.DOMAIN.MODEL
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.example.performancetracker.DATA.DATAUTILS.SportDate
+import java.util.*
 
 @Entity
 data class Sport(
     @PrimaryKey val Id: Int,
-    //val MuscularGroupe: MUSCULARGROUP,
-    //val SubMuscularGroupe:SUBMUSCULARGROUP,
+    val MuscularGroupe: MUSCULARGROUP,
+    val SubMuscularGroupe:SUBMUSCULARGROUP,
     val Exercice: String,
     val RepNumGoal: Int,
     val RepNumDone: Int,
     val restTime:Int,
-    val Date:Long,
+    val Date: Long,
     val weight:Float
 ){
 
