@@ -1,12 +1,9 @@
-package com.example.performancetracker.DOMAIN.USECASES.GLOBAL_USESCASES
+package com.example.performancetracker.DOMAIN.USECASES
 
 import com.example.performancetracker.DATA.DATAUTILS.SportDate
 import com.example.performancetracker.DOMAIN.MODEL.Sport
 import com.example.performancetracker.DOMAIN.REPOSITORY.SportRepository
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.map
 import java.sql.Time
-import java.util.Calendar
 
 class GetExerciseListOfTheDay(private val repository: SportRepository) {
 

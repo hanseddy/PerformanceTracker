@@ -1,5 +1,6 @@
 package com.example.performancetracker.DATA.ROOM
 
+import android.os.FileObserver.DELETE
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
@@ -21,4 +22,7 @@ interface SportDAO {
 
     @Delete
     suspend fun deleteSportData(sport: Sport)
+
+    @Query("DELETE FROM Sport WHERE Exercice IN (:exerciceName)")
+    suspend fun deleteByExerciseName(exerciceName:String)
 }

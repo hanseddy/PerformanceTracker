@@ -15,4 +15,6 @@ interface SportRepository {
 
     suspend fun deleteSportData(sport: Sport)
 
+    suspend fun deleteByExerciseName(Name:String)
+
 }

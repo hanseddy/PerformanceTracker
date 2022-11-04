@@ -21,4 +21,8 @@ class SportRepositoryImpl(private val dao: SportDAO): SportRepository {
     override suspend fun deleteSportData(sport: Sport) {
         dao.deleteSportData(sport)
     }
+
+    override suspend fun deleteByExerciseName(Name: String) {
+        dao.deleteByExerciseName(Name)
+    }
 }
