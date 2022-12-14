@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PRESENTATION.UI.DisplaySportData">
+
+
+    <TextView
+        android:id="@+id/Disp_Title_sportSummery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/bebas_neue"
+        android:text="sport summery"
+        android:textColor="@color/BLUEBase"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/DispGraph_BackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@color/white"
+        android:contentDescription="back button used to navigate up"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:src="@drawable/arrow_back_40px"
+        app:layout_constraintBottom_toBottomOf="@+id/Disp_Title_sportSummery"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Disp_Title_sportSummery" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Disp_Title_sportSummery">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/disp_constraintLayThursday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/square_button_white_bcg"
+            android:padding="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/disp_dateNumThursday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="18"
+                android:textColor="@color/BLUEBase"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/Disp_CalendarThursday"
+                app:layout_constraintEnd_toEndOf="@+id/Disp_CalendarThursday"
+                app:layout_constraintStart_toStartOf="@+id/Disp_CalendarThursday"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/Disp_CalendarThursday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
+                android:text="@string/thursday"
+                android:textColor="@color/BLUEBase"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <ImageView
+                android:id="@+id/ThursdayTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/round_tag"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/Disp_CalendarThursday"
+                app:layout_constraintStart_toStartOf="@+id/Disp_CalendarThursday"
+                app:layout_constraintTop_toBottomOf="@+id/Disp_CalendarThursday" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/disp_constraintLayMonday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/square_button_white_bcg"
+            android:padding="6dp"
+            app:layout_constraintBottom_toBottomOf="@+id/disp_constraintLayTuesday"
+            app:layout_constraintEnd_toStartOf="@+id/disp_constraintLayTuesday"
+            app:layout_constraintTop_toTopOf="@+id/disp_constraintLayTuesday"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/disp_dateNumMonday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="15"
+                android:textColor="@color/BLUEBase"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/Disp_CalendarMonday"
+                app:layout_constraintEnd_toEndOf="@+id/Disp_CalendarMonday"
+                app:layout_constraintStart_toStartOf="@+id/Disp_CalendarMonday" />
+
+            <TextView
+                android:id="@+id/Disp_CalendarMonday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
+                android:text="@string/monday"
+                android:textColor="@color/BLUEBase"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/round_tag"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/Disp_CalendarMonday"
+                app:layout_constraintStart_toStartOf="@+id/Disp_CalendarMonday"
+                app:layout_constraintTop_toBottomOf="@+id/Disp_CalendarMonday" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/disp_constraintLaySunday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/square_button_white_bcg"
+            android:padding="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/disp_constraintLaySaturday"
+            app:layout_constraintTop_toTopOf="@+id/disp_constraintLaySaturday">
+
+            <TextView
+                android:id="@+id/disp_dateNumSunday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="21"
+                android:textColor="@color/BLUEBase"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/Disp_CalendarSunday"
+                app:layout_constraintEnd_toEndOf="@+id/Disp_CalendarSunday"
+                app:layout_constraintStart_toStartOf="@+id/Disp_CalendarSunday"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/Disp_CalendarSunday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
+                android:text="@string/Sunday"
+                android:textColor="@color/BLUEBase"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <ImageView
+                android:id="@+id/SundayTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/round_tag"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/Disp_CalendarSunday"
+                app:layout_constraintStart_toStartOf="@+id/Disp_CalendarSunday"
+                app:layout_constraintTop_toBottomOf="@+id/Disp_CalendarSunday" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/disp_constraintLayWednesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/square_button_white_bcg"
+            android:padding="6dp"
+            app:layout_constraintBottom_toBottomOf="@+id/disp_constraintLayThursday"
+            app:layout_constraintEnd_toStartOf="@+id/disp_constraintLayThursday"
+            app:layout_constraintTop_toTopOf="@+id/disp_constraintLayThursday"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/disp_dateNumWednesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="17"
+                android:textColor="@color/BLUEBase"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/Disp_CalendarWednesday"
+                app:layout_constraintEnd_toEndOf="@+id/Disp_CalendarWednesday"
+                app:layout_constraintStart_toStartOf="@+id/Disp_CalendarWednesday"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/Disp_CalendarWednesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
+                android:text="@string/wednesday"
+                android:textColor="@color/BLUEBase"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <ImageView
+                android:id="@+id/WednesdayTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/round_tag"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/Disp_CalendarWednesday"
+                app:layout_constraintStart_toStartOf="@+id/Disp_CalendarWednesday"
+                app:layout_constraintTop_toBottomOf="@+id/Disp_CalendarWednesday" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/disp_constraintLayFriday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/square_button_white_bcg"
+            android:padding="6dp"
+            app:layout_constraintBottom_toBottomOf="@+id/disp_constraintLayThursday"
+            app:layout_constraintStart_toEndOf="@+id/disp_constraintLayThursday"
+            app:layout_constraintTop_toTopOf="@+id/disp_constraintLayThursday">
+
+            <TextView
+                android:id="@+id/disp_dateNumFriday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="19"
+                android:textColor="@color/BLUEBase"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/Disp_CalendarFriday"
+                app:layout_constraintEnd_toEndOf="@+id/Disp_CalendarFriday"
+                app:layout_constraintStart_toStartOf="@+id/Disp_CalendarFriday"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/Disp_CalendarFriday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
+                android:text="@string/friday"
+                android:textColor="@color/BLUEBase"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <ImageView
+                android:id="@+id/FridayTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/round_tag"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/Disp_CalendarFriday"
+                app:layout_constraintStart_toStartOf="@+id/Disp_CalendarFriday"
+                app:layout_constraintTop_toBottomOf="@+id/Disp_CalendarFriday" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/disp_constraintLaySaturday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/square_button_white_bcg"
+            android:padding="6dp"
+            app:layout_constraintBottom_toBottomOf="@+id/disp_constraintLayFriday"
+            app:layout_constraintStart_toEndOf="@+id/disp_constraintLayFriday"
+            app:layout_constraintTop_toTopOf="@+id/disp_constraintLayFriday">
+
+            <TextView
+                android:id="@+id/disp_dateNumSaturday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="20"
+                android:textColor="@color/BLUEBase"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/Disp_CalendarSaturday"
+                app:layout_constraintEnd_toEndOf="@+id/Disp_CalendarSaturday"
+                app:layout_constraintStart_toStartOf="@+id/Disp_CalendarSaturday"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/Disp_CalendarSaturday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
+                android:text="@string/saturday"
+                android:textColor="@color/BLUEBase"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <ImageView
+                android:id="@+id/SaturdayTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/round_tag"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/Disp_CalendarSaturday"
+                app:layout_constraintStart_toStartOf="@+id/Disp_CalendarSaturday"
+                app:layout_constraintTop_toBottomOf="@+id/Disp_CalendarSaturday" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/disp_constraintLayTuesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/square_button_white_bcg"
+            android:padding="6dp"
+            app:layout_constraintBottom_toBottomOf="@+id/disp_constraintLayWednesday"
+            app:layout_constraintEnd_toStartOf="@+id/disp_constraintLayWednesday"
+            app:layout_constraintTop_toTopOf="@+id/disp_constraintLayWednesday"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/disp_dateNumTuesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="16"
+                android:textColor="@color/BLUEBase"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/Disp_CalendarTuesday"
+                app:layout_constraintEnd_toEndOf="@+id/Disp_CalendarTuesday"
+                app:layout_constraintStart_toStartOf="@+id/Disp_CalendarTuesday"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/Disp_CalendarTuesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_light"
+                android:text="@string/tuesday"
+                android:textColor="@color/BLUEBase"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <ImageView
+                android:id="@+id/TuedayTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/round_tag"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/Disp_CalendarTuesday"
+                app:layout_constraintStart_toStartOf="@+id/Disp_CalendarTuesday"
+                app:layout_constraintTop_toBottomOf="@+id/Disp_CalendarTuesday" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+        <RadioButton
+            android:id="@+id/RadioBut_pectoraux"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pectoraux"
+            android:fontFamily="@font/bebas_neue"
+            android:button="@android:color/transparent"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:background="@drawable/radiobutton_selector"/>
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

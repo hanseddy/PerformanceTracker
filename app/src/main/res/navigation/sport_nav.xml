@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConfigDataNav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.performancetracker.PRESENTATION.UI.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_displaySportData"
+            app:destination="@id/displaySportDataFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/executionSportFragment"
+        android:name="com.example.performancetracker.PRESENTATION.UI.ExecutionSport"
+        android:label="fragment_execution_sport"
+        tools:layout="@layout/fragment_execution_sport" >
+        <action
+            android:id="@+id/action_executionSport_to_home2"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_executionSport_to_displaySportData"
+            app:destination="@id/displaySportDataFragment" />
+    </fragment>
+
+        <fragment
+            android:id="@+id/displaySportDataFragment"
+            android:name="com.example.performancetracker.PRESENTATION.UI.DisplaySportData"
+            android:label="fragment_display_sport_data"
+            tools:layout="@layout/fragment_display_sport_data">
+
+            <action
+                android:id="@+id/action_displaySportData_to_executionSport"
+                app:destination="@id/executionSportFragment" />
+            <action
+                android:id="@+id/action_displaySportData_to_home2"
+                app:destination="@id/homeFragment" />
+        </fragment>
+    <navigation android:id="@+id/navigation"
+        app:startDestination="@id/configExerciseGroup">
+        <fragment
+            android:id="@+id/configExerciseGroup"
+            android:name="com.example.performancetracker.PRESENTATION.UI.ConfigExerciseGroup"
+            android:label="fragment_config_exercise_group"
+            tools:layout="@layout/fragment_config_exercise_group">
+            <action
+                android:id="@+id/action_configExerciseGroup_to_configRepAndSerie"
+                app:destination="@id/configRepAndSerie" />
+            <action
+                android:id="@+id/action_configExerciseGroup_to_home2"
+                app:destination="@id/homeFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/configRepAndSerie"
+            android:name="com.example.performancetracker.PRESENTATION.UI.ConfigRepAndSerie"
+            android:label="fragment_config_rep_and_serie"
+            tools:layout="@layout/fragment_config_rep_and_serie">
+            <action
+                android:id="@+id/action_configRepAndSerie_to_configRestTime"
+                app:destination="@id/configRestTime" />
+            <action
+                android:id="@+id/action_configRepAndSerie_to_configExerciseGroup"
+                app:destination="@id/configExerciseGroup" />
+            <action
+                android:id="@+id/action_configRepAndSerie_to_home2"
+                app:destination="@id/homeFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/configRestTime"
+            android:name="com.example.performancetracker.PRESENTATION.UI.configRestTime"
+            android:label="fragment_config_rest_time"
+            tools:layout="@layout/fragment_config_rest_time">
+            <action
+                android:id="@+id/action_configRestTime_to_configRepAndSerie"
+                app:destination="@id/configRepAndSerie" />
+            <action
+                android:id="@+id/action_configRestTime_to_executionSport"
+                app:destination="@id/executionSportFragment" />
+            <action
+                android:id="@+id/action_configRestTime_to_home2"
+                app:destination="@id/homeFragment" />
+        </fragment>
+    </navigation>
+
+</navigation>

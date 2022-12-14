@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/bottombuttonhome"/>
+    <item android:title="sport"
+        android:id="@+id/displaySportDataFragment"
+        android:icon="@drawable/bottombuttonsport"/>
+    <item android:title="Foods"
+        android:id="@+id/executionSportFragment"
+        android:icon="@drawable/bottombuttonfood"/>
+</menu>

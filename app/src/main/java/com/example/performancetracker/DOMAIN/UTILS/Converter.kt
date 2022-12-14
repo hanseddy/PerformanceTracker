@@ -15,4 +15,10 @@ class Converter {
 
     @TypeConverter
     fun fromSUBMUSCULARGROUP(value: Sport.Companion.SUBMUSCULARGROUP) = value.name
+
+    @TypeConverter
+    fun toEXOTYPES(value : String) = enumValueOf<DomUtils.Companion.EXOTYPES>(value)
+
+    @TypeConverter
+    fun fromEXOTYPES(value: DomUtils.Companion.EXOTYPES) = value.name
 }
